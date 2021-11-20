@@ -33,8 +33,7 @@ function Row({ title, fetchUrl, isLargeRow, type }) {
       var fetchYtUrl = `${baseUrl}/${movie.id}/videos?api_key=${API_KEY}`;
       const ytKey = await axios.get(fetchYtUrl);
       const vidArr = ytKey.data.results;
-      console.log(vidArr);
-      vidArr.array.forEach((e) => {
+      vidArr.forEach((e) => {
         if (e.type === "Trailer") {
           setTrailerUrl(e.key);
         }
