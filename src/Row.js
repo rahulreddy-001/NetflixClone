@@ -34,14 +34,13 @@ function Row({ title, fetchUrl, isLargeRow, type }) {
       const ytKey = await axios.get(fetchYtUrl);
       const vidArr = ytKey.data.results;
       console.log(vidArr);
-      vidArr.map((e) => {
-        if (e.type === "Trailer") setTrailerUrl(e.key);
+      vidArr.array.forEach((e) => {
+        if (e.type === "Trailer") {
+          setTrailerUrl(e.key);
+        }
       });
     }
   };
-  {
-    console.log(movies);
-  }
   return (
     <>
       <div className="row">
