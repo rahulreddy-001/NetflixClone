@@ -16,6 +16,18 @@ function App() {
         type="movie"
       />
       <Row
+        title="Trending in Movies"
+        fetchUrl={requests.fetchTrendingInMovie}
+        type="movie"
+        isLargeRow={true}
+      />
+      <Row
+        title="Trending in TV"
+        fetchUrl={requests.fetchTrendingInTV}
+        type="tv"
+        isLargeRow={true}
+      />
+      <Row
         title="Netflix Originals"
         fetchUrl={requests.fetchNetflixOriginals}
         isLargeRow={true}
@@ -49,23 +61,6 @@ function App() {
         title="Sony Liv Originals"
         fetchUrl={requests.fetchSonyLivOriginals}
         isLargeRow={true}
-        type="tv"
-      />
-      <Row
-        title="Zee TV Originals"
-        fetchUrl={requests.fetchZeeTVOriginals}
-        isLargeRow={true}
-        type="tv"
-      />
-
-      <Row
-        title="Trending in Movies"
-        fetchUrl={requests.fetchTrendingInMovie}
-        type="movie"
-      />
-      <Row
-        title="Trending in TV"
-        fetchUrl={requests.fetchTrendingInTV}
         type="tv"
       />
       <Row

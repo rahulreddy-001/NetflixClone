@@ -6,7 +6,7 @@ function Banner() {
   const [movie, setMovie] = React.useState([]);
   React.useEffect(() => {
     async function fetchData() {
-      const request = await axios.get(requests.fetchTreInIndia);
+      const request = await axios.get(requests.fetchTrendingInMovie);
       setMovie(
         request.data.results[
           Math.floor(Math.random() * request.data.results.length - 1)
